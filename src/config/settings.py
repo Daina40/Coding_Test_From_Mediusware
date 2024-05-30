@@ -38,8 +38,7 @@ INSTALLED_APPS = [
     'django_extensions',
     'rest_framework',
     'authentication',
-    'product',
-    'django_filters'
+    'product'
 ]
 
 REST_FRAMEWORK = {
