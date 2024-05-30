@@ -12,7 +12,7 @@ class CreateProductView(generic.TemplateView):
         variants = Variant.objects.filter(active=True).values('id', 'title')
         context['product'] = True
         context['variants'] = list(variants.all())
-        
+
         # Add the filter form
         product_filter = ProductFilter(self.request.GET, queryset=Product.objects.all())
         paginator = Paginator(product_filter.qs, 10)
